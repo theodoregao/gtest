@@ -1,0 +1,19 @@
+add_library(list "")
+
+target_sources(
+    list
+    PRIVATE
+    src/book.cpp
+    src/arraylist.cpp
+    src/linkedlist.cpp
+    PUBLIC
+    ${CMAKE_CURRENT_LIST_DIR}/include/book.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/arraylist.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/linkedlist.h
+    )
+
+target_include_directories(
+    list
+    PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/include
+    )

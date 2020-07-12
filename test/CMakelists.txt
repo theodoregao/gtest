@@ -1,0 +1,18 @@
+add_executable(
+    listtest
+    arraylisttest.cpp
+    linkedlisttest.cpp
+    )
+
+target_link_libraries(
+  listtest
+    gtest_main
+    list
+    )
+
+add_test(
+  NAME
+    unit
+  COMMAND
+    ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_BINDIR}/listtest
+  )
